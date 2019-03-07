@@ -1,7 +1,7 @@
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class MagentoTest 
@@ -9,7 +9,7 @@ public class MagentoTest
 	@Test
 	public void mainTest()
 	{
-		WebDriver driver=new InternetExplorerDriver();
+		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.navigate().to("https://magento.com");
